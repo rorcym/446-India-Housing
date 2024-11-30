@@ -4,18 +4,18 @@ import joblib
 import base64
 
 # Load the trained Random Forest model and scaler
-model = joblib.load("/Users/roycim/Desktop/rf_fixed.pkl")
-scaler = joblib.load("/Users/roycim/Desktop/scaler.pkl")
+model = joblib.load("rf_fixed.pkl")
+scaler = joblib.load("scaler.pkl")
 
 # Load the dataset
-file_path = "/Users/roycim/Desktop/India LatiLongi.csv"
+file_path = "India LatiLongi.csv"
 data = pd.read_csv(file_path)
 
 # Page configuration
 st.set_page_config(page_title="House Price Prediction", layout="wide", initial_sidebar_state="auto")
 
 # Add company logo in the corner
-logo_path = "/Users/roycim/Desktop/compressed.png"
+logo_path = "compressed.png"
 with open(logo_path, "rb") as image_file:
     encoded_logo = base64.b64encode(image_file.read()).decode()
 
